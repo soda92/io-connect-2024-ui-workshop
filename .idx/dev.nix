@@ -5,11 +5,14 @@
   # Use https://search.nixos.org/packages to find packages
   packages = [
     pkgs.nodejs_20
+    pkgs.neovim
+    pkgs.git
   ];
   idx = {
     workspace = {
       onCreate = {
         npm-install = "npm install";
+        git-clone = "git clone https://github.com/nvim-lua/kickstart.nvim.git ~/.config/nvim";
       };
     };
     previews = {
